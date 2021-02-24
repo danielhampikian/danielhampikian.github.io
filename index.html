@@ -37,12 +37,35 @@
           <div class="masthead-content text-white py-5 py-md-0">
             <h1 class="mb-3">Coming Soon!</h1>
             <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is
-              <strong>January 2022</strong>! Sign up for updates using the form below!</p>
-            <div class="input-group input-group-newsletter">
-              <input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="submit-button">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="submit-button">Notify Me!</button>
+              <strong>January 2022</strong>! Get in touch with us!</p>
+            
+
+              
+                <form
+                action="https://formspree.io/f/mgepbjaq"
+                method="POST"
+                >
+              <div class="form-group input-group input-group-newsletter">
+                <label for="email">Email Address:</label>
+            
+                <input class="form-control-sm" type="text" name="_replyto" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="submit-button">
               </div>
+              <div class='form-group'>
+                <label for='subject'>Subject:</label>
+                <input class="form-control-sm" placeholder="Enter subject..." aria-label="Enter subject..." aria-describedby="submit-button" name="subject"></input>
+              </div>
+                <div class='form-group'>
+                <label for='message'>Colloboration Ideas:</label>
+                <textarea class="form-control" name="message" row="3"></textarea>
+                </div>
+              <!-- your other form fields go here -->
+              <div class="input-group-btn input-group-append">
+              <button class="btn btn-secondary"type="submit">Send</button>
+            
+            </div>
+            </form>
+
+
             </div>
           </div>
         </div>
