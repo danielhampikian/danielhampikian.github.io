@@ -1,38 +1,36 @@
-/* .header {
-    padding:10px;
-    min-height: 200px;
-    max-height: 300px;
-    background-color: darkgrey;
-} */
+
 
 #rick{
     background-image: url("https://img.apmcdn.org/768cb350c59023919f564341090e3eea4970388c/normal/5034f3-20180309-rick-astley.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
-div.square {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    animation-name: example;
-    animation-duration: 2s;
+.shape {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+
+}
+
+div #square.shape {
+
+    animation-name: squaredance;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
+    
   }
   
-  @keyframes example {
+  @keyframes squaredance{
     0%   {background-color:red; left:0px; top:0px;}
     25%  {background-color:yellow; left:40px; top:0px;}
     50%  {background-color:blue; left:40px; top:40px;}
     75%  {background-color:green; left:0px; top:40px;}
     100% {background-color:red; left:0px; top:0px;}
   }
-div.circle {
+
+  div #circle.shape {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: relative;
     animation-name: example2;
     animation-duration: 3s;  
     animation-fill-mode: forwards;
@@ -47,6 +45,7 @@ img {
     max-width: 1500px;
 }
 #rick{
+  z-index: 100;
     width: 100px;
     height: 100px;
     transition: width 2s, height 2s;
@@ -64,10 +63,7 @@ h1 {
 * {
     box-sizing: border-box;
   }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+
   
   /* Style the header */
   .header {
@@ -81,23 +77,19 @@ h1 {
   .row {
     display: -webkit-flex;
     display: flex;
+    flex-direction: row;
   }
   
   /* Create three equal columns that sits next to each other */
   .column {
+    border-style: solid;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 10px;
+    margin: 50px;
   }
   
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 40px;
-    margin-top: 100px;
-    text-align: center;
-  }
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
@@ -106,3 +98,36 @@ h1 {
       flex-direction: column;
     }
   }
+  .footer {
+    padding: 40px;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(169deg, #76d9c0, #782c8e, #f0962d);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 2s ease infinite;
+    -moz-animation: AnimationName 2s ease infinite;
+    -o-animation: AnimationName 2s ease infinite;
+    animation: AnimationName 2s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+ 
