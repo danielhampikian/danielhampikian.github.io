@@ -38,6 +38,8 @@
     text-align: center;
   }
   .card-image {
+      max-width: 200px;
+      max-height: 2500px;
       width:100%;
  
   }

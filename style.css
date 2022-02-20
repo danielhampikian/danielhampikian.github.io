@@ -11,3 +11,8 @@ h2 {
     background-image:url("paris.jpg")
 }
 #content h1 {  background-color: yellow; }
+
+img {
+    max-width: 200px;
+    max-height: 300px;
+}
