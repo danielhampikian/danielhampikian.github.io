@@ -1,0 +1,18 @@
+h2 {
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+.custom-class {
+    border-style: solid;
+    height: 400px;
+    width: 400px;
+    background-image:url("paris.jpg")
+}
+#content h1 {  background-color: yellow; }
+
+img {
+    max-width: 200px;
+    max-height: 300px;
+}
