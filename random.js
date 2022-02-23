@@ -2,6 +2,7 @@ var inputMin;
 var inputMax;
 var displayNum;
 
+
 function randomSpin() {
     var timesRun = 0;
     var interval = setInterval(function(){
@@ -44,4 +45,22 @@ function getRndInteger() {
 function pureRandom(max) {
     return Math.random() * max + 1;
 }
+
+
+function randomNum() {
+    var displayPlace = document.getElementById('displayNum');
+    displayPlace.addEventListener('click', rollDice);
+    var randomNumber = Math.floor(Math.random() * 6 + 1);
+    console.log('Random number is: ' + randomNumber);
+    displayPlace.innerHTML = 'Random Number Result: ' + randomNumber;
+}
+
+function rollDice(){
+    alert('Dice is rolled');
+}
+
+randomNum();
+
+
+
 

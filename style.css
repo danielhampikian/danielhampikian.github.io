@@ -10,7 +10,7 @@ h2 {
     width: 400px;
     background-image:url("paris.jpg")
 }
-#content h1 {  background-color: yellow; }
+.paris#content {  background-color: yellow !important; }
 
 img {
     max-width: 200px;
