@@ -34,19 +34,19 @@ window.onload = function() {
   };
   
   function rolling(eID){
-      console.log("rolling: " + eID);
+      //console.log("rolling: " + eID);
       intID = setInterval(rotateCube,100,eID);
       clicked = true;
   }
   function rollEnd(eID){
     clicked = false;
-    console.log("unclicked: " + eID + " num to index is: " + parseInt(eID.substring(eID.length - 1)));
+    //console.log("unclicked: " + eID + " num to index is: " + parseInt(eID.substring(eID.length - 1)));
     clearInterval(intID);
     rollDie(eID, parseInt(eID.substring(eID.length - 1)));
   }
   function mouseLeft(eID){
     if(clicked) {
-    console.log("mouse left: " + eID);
+    //console.log("mouse left: " + eID);
     clearInterval(intID);
     rollEnd(eID);
     }
