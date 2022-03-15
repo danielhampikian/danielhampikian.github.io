@@ -139,8 +139,6 @@ function AIChoice(){
     }
 }
 
-
-
 function cardBattle(){
     AIChoice();
     
@@ -179,23 +177,15 @@ function refreshScore() {
 function checkGameOver() {
     if (playerHealth < 0 && opponentHealth > 0) {
         gameOver = true;
-        showModal("You lost!", "Refresh your browser to play again.");
-        console.log("You lost!", "Refresh your browser to play again.")
-        //cardUpgradeRef.style.display = "none";
+        showModal("You lost!", "Remember to select attack or defend each turn before battle");
     }
     else if (opponentHealth < 0 && playerHealth > 0) {
         gameOver = true;
-        showModal("You won!", "Refresh your browser to play again.");
-        console.log("You won!", "Refresh your browser to play again.");
-
-        //cardUpgradeRef.style.display = "none";
+        showModal("You won!", "Play again to master the game");
     }
     else if (opponentHealth < 0 && playerHealth < 0) {
         gameOver = true;
-        showModal("It was a tie, both players died!", "Refresh your browser to play again");
-        console.log("It was a tie, both players died!", "Refresh your browser to play again");
-
-        //cardUpgradeRef.style.display = "none";
+        showModal("It was a tie, both players died!", "Remember to select attack or defend each turn before battle");
     }
 }
 function showModal(modalTitle, info){

@@ -1,6 +1,9 @@
 .card{
     width: 14rem;
 }
+.card-img-top {
+    width: 12rem;
+}
 .health-score{
     margin-top:10px;
     margin-bottom: 10px;
