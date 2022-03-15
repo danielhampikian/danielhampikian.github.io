@@ -1,0 +1,11 @@
+.card{
+    width: 14rem;
+}
+.health-score{
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: aquamarine;
+}
+.battle-area{
+    background-color: black;
+}

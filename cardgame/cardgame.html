@@ -7,142 +7,179 @@
   
   <body>
     
-    <div class="jumbotron jumbotron-fluid" style="background-image: url(dice.png);">
-      <div class="container text-white text-center py-5 px-4">
   
-          <div class="display-4 text-center flux">Play Summoner!!!</div>
-      </div>
-    </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalDisp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        <p id="runningPlayerScore"></p>
-        <p id="runningComputerScore"></p>
-        <p id="additionalInfo"></p>
-        </div>
-        <div class="modal-footer">
-          <button id="playButton" onclick='loadGame()' type="button" class="btn btn-secondary" data-dismiss="modal">Play Game</button>
-        </div>
-      </div>
-    </div>
-  </div>
-    
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body text-center py-5 px-4">
-            <h5 class="card-title">Score</h5>
-            <p id="playerScoreDisp" class="card-text">Player Score: 0</p>
-            <p id="computerScoreDisp" class="card-text">Computer Score: 0</p>
-            </div>
-            </div>
-          </div>
-      <div class="col-sm">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body text-center py-5 px-4">
-            <h5 class="card-title">Game</h5>
-            <p id="roundDisp" class="card-text">Round: 5</p>
-            <p id="rollsLeftDisp" class="card-text">Rolls Left: 10</p>
-            </div>
-            </div>
-          </div>
-    </div>
-  </div>
-
-<h2>Opponent Creatures</h2>
-
-<div class="card-containter container-fluid">
+<div class="card-containter container-sm">
   <div class="row">
     <div class="col">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="fox.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Fox</h5>
+          <div class="row">
+            <div class="col health">
+            Health: 0
+            </div>
+            <div class="col attack">
+            Attack 0
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+          <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+          </div>
+          <div class="col">
+          <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+        </div>
+        </div>    
         </div>
       </div>
-      </div>
- 
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
     </div>
-  </div>
+ 
+      <div class="col">
+        <div class="card">
+          <img src="fox.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fox</h5>
+            <div class="row">
+              <div class="col health">
+              Health: 0
+              </div>
+              <div class="col attack">
+              Attack 0
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+            <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+            </div>
+            <div class="col">
+            <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+          </div>
+          </div>    
+          </div>
+        </div>
+      </div>
 
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="fox.jpeg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h5 class="card-title">Fox</h5>
+        <div class="row">
+          <div class="col health">
+          Health: 0
+          </div>
+          <div class="col attack">
+          Attack 0
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+        <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+        </div>
+        <div class="col">
+        <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+      </div>
+      </div>    
       </div>
     </div>
   </div>
 </div>
 </div>
+
+<div class="battle-area">
+<h5 class="text-center health-score" id="opponent-health">Opponent Health: 10</h5>
    
 <div class="container">
   <div class="row">
     <div class="col text-center">
-      <button class="btn btn-large btn-danger">Centered button</button>
+      <button type='button' onclick="cardBattle()" class="btn btn-lg btn-danger">Battle!</button>
     </div>
   </div>
 </div>
 
-<h2>Player Creatures</h2>
+<h5 class="health-score text-center" id="player-health">Player Health: 10</h5>
+</div>
 
-<div class="card-containter container-fluid">
+<div class="card-containter container-sm">
   <div class="row">
     <div class="col">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="fox.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Fox</h5>
+          <div class="row">
+            <div class="col health">
+            Health: 0
+            </div>
+            <div class="col attack">
+            Attack 0
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+          <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+          </div>
+          <div class="col">
+          <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+        </div>
+        </div>    
         </div>
       </div>
-      </div>
- 
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
     </div>
-  </div>
+ 
+      <div class="col">
+        <div class="card">
+          <img src="fox.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fox</h5>
+            <div class="row">
+              <div class="col health">
+              Health: 0
+              </div>
+              <div class="col attack">
+              Attack 0
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+            <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+            </div>
+            <div class="col">
+            <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+          </div>
+          </div>    
+          </div>
+        </div>
+      </div>
 
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="fox.jpeg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h5 class="card-title">Fox</h5>
+        <div class="row">
+          <div class="col health">
+          Health: 0
+          </div>
+          <div class="col attack">
+          Attack 0
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+        <button type="button" class="btn btn-primary btn-sm">Attacker</button>
+        </div>
+        <div class="col">
+        <button type="button" class="btn btn-secondary btn-sm">Defender</button>  
+      </div>
+      </div>    
       </div>
     </div>
   </div>
 </div>
 </div>
-    
- 
+<script src="cardgame.js"></script>
+
+  </body>
+</html>
