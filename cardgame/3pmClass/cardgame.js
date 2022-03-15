@@ -30,8 +30,8 @@ function initGame() {
         else {
             playerCardArray[i-3][0] = attackVal;
             playerCardArray[i-3][1] = healthVal;
-            playerCardArray[i-3][2] = "Player card  number: " + i-3;
-            console.log(playerCardArray[i-3][2]);
+            playerCardArray[i-3][2] = "Player card  number: " + (i-3);
+            console.log("i is: " + i + " " +playerCardArray[i-3][2]);
         }
     } 
     updateDisplay();
