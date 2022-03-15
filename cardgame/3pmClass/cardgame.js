@@ -59,11 +59,36 @@ function updateDisplay() {
 }
 function cardDeathMatch() {
     //1. go through all player cards and all enemy cards
-    
-    //2. subtract the attack from the health of all player cards and enemy cards
-
-    //3. kill any creatures with 0 or less health
-
-    //4. subtract creature attack from player and enemy health if any creatures are dead already
+        for (let i = 0; i< playerCardArray.length; i++) {
+            playerCardArray[i][1] -= opponentCardArray[i][0];
+            opponentCardArray[i][1] -= playerCardArray[i][0];
+            if (opponentCardArray[i][1]<1) {
+                if (opponentCardArray[i][2] == "I'm dead") {
+                    opponentHealth -= playerCardArray[i][0];
+                    opponentCardArray[i][1] = 0;
+                }
+                opponentCardArray[i][2] = "I'm dead";
+            }
+            if(playerCardArray[i][1] < 1) {
+                if (playerCardArray[i][2] == "I'm dead") {
+                    playerHealth -= opponentCardArray[i][0];
+                    playerCardArray[i][1] = 0;
+                }
+                playerCardArray[i][2] = "I'm dead";
+            }
+            checkGameOver();
+            updateDisplay();
+        }
+}
+function checkGameOver() {
+    if (playerHealth < 1 && opponentHealth < 1) {
+        alert("It was a tie");
+    }
+    else if (playerHealth < 1) {
+        alert("You lost");
+    }
+    else if (opponentHealth < 1) {
+        alert("You won");
+    }
 }
 initGame();
