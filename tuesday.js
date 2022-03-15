@@ -1,19 +1,6 @@
 var bodyLink;
 var buttonPressed = false;
 
-
-//Stuff to look into:
-
-//setInterval
-// var timer = setInterval(() => {
-//     document.getElementById('element0').innerHTML += '<h1>Hi</h1>';
-// }, 1000);
-// clearInterval(timer);
-
-
-// setTimeout
-// clearTimeout
-
 function makeWebpage(){
     
 
