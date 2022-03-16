@@ -1,0 +1,14 @@
+  .card {
+    width: 18rem; 
+    height: 24rem;
+  }
+
+  .card-img-top {
+      width: 12rem;
+      
+  }
+
+  .cards-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }

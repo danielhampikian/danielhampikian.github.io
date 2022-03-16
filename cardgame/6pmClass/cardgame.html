@@ -14,13 +14,93 @@
 </head>
 
 <body>
+    <div class="container cards-container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+                <img src="spi.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Spider</h5>
+
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility()"type="button" class="btn btn-primary">Special</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <img src="sas.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sas</h5>
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility()"type="button" class="btn btn-primary">Special</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <img src="loc.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Loc</h5>
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility()"type="button" class="btn btn-primary">Special</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- OPPONENT CARDS ABOVE -->
+<div class="container text-center">
+    <h4 id="opponent-health">Opponent Health: 20</h4>
+
+      <button onclick="cardBattle()" type="button" class="btn btn-danger btn-lg">Card Battle</button>
+      <h4 id="player-health">Player Health: 20</h4>
+
+    </div>
+    <!-- PLAYER CARDS BELOW -->
+    <div class="container cards-container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+                <img src="spi.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Spider</h5>
+
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility(0)"type="button" class="btn btn-primary">Special</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <img src="sas.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sas</h5>
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility(1)"type="button" class="btn btn-primary">Special</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <img src="loc.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Loc</h5>
+                  <p class="card-text attack">Attack: 10</p>
+                  <p class="card-text defense">Defense: 10</p>
+                  <button onclick="groupsCreativeAbility(2)"type="button" class="btn btn-primary">Special</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
 
 
-
-
-
-
-    
     <script src="cardgame.js"></script>
 
 
