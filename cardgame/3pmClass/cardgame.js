@@ -36,11 +36,24 @@ function initGame() {
     } 
     updateDisplay();
 }
-
+function aiChoice() {
+    //power up creature
+    //play spell
+    var choice = parseInt(Math.random() * 2 + 1);
+     {
+        if (choice == 0) {
+            //strategy power up 30% chance
+        }
+        else {
+            //strategy spell 60%
+        }
+    }
+}
 function updateDisplay() {
     //update player and opponent health:
     playerHealthDisp.innerHTML = "Player Health: " + playerHealth;
     opponentHealthDisp.innerHTML = "Opponent Health: " + opponentHealth;
+    var AIChoice = aiChoice();
 
     for (let i = 0; i< attackValues.length; i++) {
        
