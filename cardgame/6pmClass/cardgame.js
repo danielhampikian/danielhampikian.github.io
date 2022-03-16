@@ -62,21 +62,52 @@ function initGame() {
             if (i < 3) {
                 attackValues[i].innerHTML = "Attack: " + opponentCardArray[i][0];
                 defenseValues[i].innerHTML = "Defense: " + opponentCardArray[i][1];
-
+                titlesDisp[i].innerHTML = opponentCardArray[i][2];
             }
             else {
                 attackValues[i].innerHTML = "Attack: " + playerCardArray[i - 3][0];
                 defenseValues[i].innerHTML = "Defense: " + playerCardArray[i - 3][1];
+                titlesDisp[i].innerHTML = playerCardArray[i-3][2];
             }
         }
     }
     function aiChoice() {
         console.log("Code an ai choice about what to do with the buttons on the AI side");
+        var choice = parseInt(Math.random() * 4 + 1);
+        if (choice == 1) {
+            //this will happen 25% of the time
+        }
+        else {
+            //this will happen 75% 
+        }
+        
 
     }
 
     function cardBattle() {
         aiChoice();
+
+        for (let i = 0; i< playerCardArray.length; i++) {
+            playerCardArray[i][1] -= opponentCardArray[i][0];
+            opponentCardArray[i][1] -= playerCardArray[i][0];
+            if (playerCardArray[i][1]<1) {
+                if (playerCardArray[i][2] == "ZOMBIE ATTACKER") {
+                    playerHealth -= opponentCardArray[i][0];
+                }
+                else {
+                    playerCardArray[i][2] = "ZOMBIE ATTACKER";
+                }
+            }
+            if (opponentCardArray[i][1]<1) {
+                if (opponentCardArray[i][2] == "ZOMBIE ATTACKER") {
+                    opponentHealth -= playerCardArray[i][0];
+                }
+                else {
+                   opponentCardArray[i][2] = "ZOMBIE ATTACKER";
+                }
+            }
+            checkGameOver();
+        }
         //1. needs to loop through all  card values for attack and defense
         //subtract attack from defense
             //a take into account button press choice of player
@@ -89,6 +120,18 @@ function initGame() {
 
         updateDisplay();
        
+    }
+    function checkGameOver() {
+        if (playerHealth < 1 && opponentHealth < 1) {
+            console.log("Tie");
+        }
+        else if (playerHealth < 1) {
+            console.log("Player Loses");
+
+        }
+        else if (opponentHealth < 1) {
+            console.log("Player Wins");
+        }
     }
 
     initGame();
