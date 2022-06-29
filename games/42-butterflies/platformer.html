@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>
+        Haha
+    </title>
+    <!-- let's just plop our canvas in the top left forevs -->
+    <style>
+        body {
+            font-family: 'Grand Hotel', cursive;
+        }
+
+        canvas {
+            position: fixed;
+            top: 55px;
+            left: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            float: left;
+        }
+
+        button {
+            background-color: transparent;
+            border: 0;
+            font-size: 2em;
+            float: right;
+            width: 50px;
+            text-align: left;
+        }
+
+        #playButton {
+            display: block;
+        }
+
+        #pauseButton {
+            display: none;
+        }
+
+        div {
+            width: 800;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div>
+<audio id="music" src="42butterflies.mp3" type="audio/mpeg" loop="true">
+</audio>
+<h1>
+    Butterflies collected: <span id="score"></span>
+</h1>
+
+    <button id="playButton"><i class="fa fa-volume-off"></i></button>
+    <button id="pauseButton"><i class="fa fa-volume-up"></i></button>
+
+    <canvas id="canvas">
+    </canvas>
+    <script type="text/javascript" src="js/butterfly.js"></script>
+    <script type="text/javascript" src="js/level.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/sprite.js"></script>
+
+</div>
+<script type="text/javascript" src="js/platformer.js"></script>
+</body>
+</html>

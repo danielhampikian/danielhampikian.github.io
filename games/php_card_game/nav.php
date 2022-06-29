@@ -1,0 +1,73 @@
+<?php
+session_start();
+?>
+<style>
+  #current_page {
+  text-decoration-color: #262626;
+  text-decoration: underline;
+}
+.not_current_page {
+text-decoration:none;
+}
+.topnav {
+  overflow: hidden;
+  padding: 20px;
+  background-color: rgba(97, 95, 204, 0.1);
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  font-size: x-large;
+  color: rgb(221, 137, 207);
+  text-align:  center;
+  padding: 10px;
+  margin: 10px;
+  border-color: skyblue;
+  border: 2px solid rgb(246, 238, 238);
+}
+.topnav a:hover {
+  color: black;
+  background-color: rgb(221, 137, 207);
+
+}
+</style>
+<div <?php echo 'class="topnav"';?>>
+		<a <?php
+		if($current_page == "home") 
+		{ 
+		echo 'id="current_page"';
+		}
+		else {
+		echo 'class="not_current_page"';
+		}
+		?>
+		href="index.php">home</a>
+		<a <a <?php
+		if($current_page == "game") 
+		{ 
+		echo 'id="current_page"';
+		}
+		else {
+		echo 'class="not_current_page"';
+		}
+		?>href="game.php">game</a>
+</div>
+<?php 
+if($current_page == "home") 
+{ 
+	echo "<h1 class='info'>Please log in or create account to play</h1>";
+	
+}
+else if ($current_page == "game")
+{
+	// print_r($_SESSION);
+	$name = $_SESSION["username"];
+	$score = $_SESSION["score"];
+	echo "<h1 style='float:left;' class='info'>Welcome $name your high score is currently: $score </h1>
+	<form action='logout.php' method='post' id='frmLogout'>
+        <input type='submit' name='logout' value='Logout' class='btnLogin' style='width:100px; float:right; margin:20px;'>
+	</form>";
+}
+?>
