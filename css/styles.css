@@ -10947,9 +10947,10 @@ section {
 }
 
 section.cta {
+  text-align: center;
   position: relative;
-  padding: 15rem 0;
-  background-image: url("https://source.unsplash.com/5g41N3uRPf8/1500x800");
+  padding: 15rem 15px;
+  background-image: url("../assets/img/2.png");
   background-position: center;
   background-size: cover;
 }
