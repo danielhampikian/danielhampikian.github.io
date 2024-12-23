@@ -1,0 +1,15 @@
+#caro-slide-1{
+    background-image: url('pictures/roses.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+#caro-slide-2{
+    background-image: url('pictures/forest.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+#caro-slide-3{
+    background-image: url('pictures/sunset.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
