@@ -1,8 +1,10 @@
+   
+
 name: Sync to S3
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   sync:
     runs-on: ubuntu-latest
