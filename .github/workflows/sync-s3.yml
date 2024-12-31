@@ -20,10 +20,10 @@ jobs:
         aws-region: us-east-1  
     
     - name: Remove old files 
-      run: aws s3 rm s3://amazon-cloudfront-secure-static-site--s3bucketroot-paumfo6rmq8l --recursive
+      run: aws s3 rm ${{ secrets.AWS_S3_BUCKET }} --recursive
     
     - name: Sync to S3
-      run: aws s3 sync . s3://amazon-cloudfront-secure-static-site--s3bucketroot-paumfo6rmq8l --delete
+      run: aws s3 sync . ${{ secrets.AWS_S3_BUCKET }} --delete
 
     - name: Clean CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
