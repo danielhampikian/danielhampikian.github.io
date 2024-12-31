@@ -24,5 +24,8 @@ jobs:
     
     - name: Sync to S3
       run: aws s3 sync . s3://amazon-cloudfront-secure-static-site--s3bucketroot-paumfo6rmq8l --delete
+
+    - name: Clean CloudFront Cache
+      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
     
     
